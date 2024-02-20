@@ -1,6 +1,12 @@
-import userRoutes from "./user.routes";
+import dashboardRoutes from "./dashboard.routes"
+import teamRoutes from "./team.routes"
+import userRoutes from "./user.routes"
 
-export const privetRoutes = [
-  ...userRoutes
+const privateRoutes = [
+  userRoutes,
+  dashboardRoutes,
+  teamRoutes
 ]
 
+
+export default privateRoutes

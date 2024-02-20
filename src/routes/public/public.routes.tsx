@@ -1,6 +1,6 @@
 import authenticationRoutes from "./authentication.routes";
 
-
-export const publicRoutes = [
-  ...authenticationRoutes
+ const publicRoutes = [
+  authenticationRoutes
 ]
+export default publicRoutes

@@ -1,9 +1,16 @@
-import { ReactNode } from "react"
-import { LoaderFunction } from "react-router-dom"
+import { ReactNode } from "react";
 
-export interface Root {
-  name: string
-  path: string
-  loader: LoaderFunction,
-  component: ReactNode
+export interface childrenType {
+  name?: string;
+  path: string;
+  element?: ReactNode;
+  children?: childrenType[];
+  checkPermission?: boolean
+}
+export interface routes {
+  checkPermission?: boolean
+  name?: string;
+  path: string;
+  element?: ReactNode;
+  children?: childrenType[];
 }

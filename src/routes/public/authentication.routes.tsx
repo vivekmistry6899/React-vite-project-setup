@@ -1,15 +1,17 @@
+import { routes } from '../types'
 
-import { initLoginData } from '@/screens/authentication/login/Login'
-import { lazy } from 'react'
-import { Root } from '../types'
-const Login = lazy(() => import('@/screens/authentication/login/Login'))
+const authenticationRoutes:routes = {
+  path: "/",
+   children: [
+    {
+      path: "",
+      element: <>Login</>,
+     },
+    {
+      path: "register",
+      element: <>register</>,
+     },
+  ],
+ }
 
-const authenticationRoutes: Root[] = [
-  {
-    name: 'login',
-    path: "/",
-    loader: initLoginData,
-    component: <Login />
-  }
-]
 export default authenticationRoutes
